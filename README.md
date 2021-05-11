@@ -16,9 +16,10 @@ Dla uproszczenia problemu zakładamy, że:
 - wszystkie samochody są zawsze wykrywane zarówno przez kamerę przednią, jak i tylną,
 - typ pojazdu, prędkość i czas są zawsze rozpoznane prawidłowo.
 
-Dane wejściowe
-W pierwszej linii podana jest liczba oczekiwanych rozpoznań (czyli par przód + tył) oraz odległość między strefą wykrywania z kamery przedniej i kamery tylnej podana w metrach. W kolejnych
-liniach podane są rozpoznania zapisane w następującym formacie:
+Dane wejściowe\
+W pierwszej linii podana jest liczba oczekiwanych rozpoznań (czyli par przód + tył) oraz odległość między strefą wykrywania z kamery przedniej i kamery tylnej podana w metrach. 
+
+W kolejnych liniach podane są rozpoznania zapisane w następującym formacie: \
 KAMERA TYP_POJAZDU REJESTRACJA PRĘDKOŚĆ CZAS_ROZPOZNANIA
 gdzie:
 KAMERA może przyjmować wartości: F (przednia) lub R (tylna).
@@ -27,42 +28,42 @@ PRĘDKOŚĆ i CZAS_ROZPOZNANIA występują tylko w rozpoznaniach z kamer przedni
 a CZAS_ROZPOZNANIA w milisekundach.
 
 Dane wyjściowe
-Wypisane w kolejnych liniach sparowane rozpoznania w formacie:
+Wypisane w kolejnych liniach sparowane rozpoznania w formacie: \
 DOKLADNE/PRAWDOPODOBNE DOPASOWANIE (OSOBOWY/CIEZAROWY): REJESTRACJA PRZEDNIA - REJESTRACJA TYLNA 
 Informacja o dokładnym rozpoznaniu ma się pojawiać tylko w przypadku, gdy mamy pełną zgodność tablic rejestracyjnych. Pozostałe przypadki to dopasowania prawdopodobne.
 
-Przykład:
-Dane wejściowe
-10 100
-F 1 AAA2222 120 98450
-F 2 AAA1111 90 99200
-F 2 BBB1111 95 100125
-R 2 BBB1222
-F 1 AAA1010 170 101300
-F 2 CCC9999 90 102000
-F 2 BBB1212 100 102300
-F 2 XASD0000 101 102400
-R 1 AAA1020
-R 2 CCC9999
-R 1 AAA2222
-R 2 VVVV1111
-F 2 CCC2121 89 102500
-R 2 DDD0000
-F 2 XXX1234 10 103000
-F 2 XXX1334 90 103010
-R 2 DDD1111
-R 2 XXX1235
-R 2 XXX1236
+Przykład:\
+Dane wejściowe\
+10 100\
+F 1 AAA2222 120 98450\
+F 2 AAA1111 90 99200\
+F 2 BBB1111 95 100125\
+R 2 BBB1222\
+F 1 AAA1010 170 101300\
+F 2 CCC9999 90 102000\
+F 2 BBB1212 100 102300\
+F 2 XASD0000 101 102400\
+R 1 AAA1020\
+R 2 CCC9999\
+R 1 AAA2222\
+R 2 VVVV1111\
+F 2 CCC2121 89 102500\
+R 2 DDD0000\
+F 2 XXX1234 10 103000\
+F 2 XXX1334 90 103010\
+R 2 DDD1111\
+R 2 XXX1235\
+R 2 XXX1236\
 R 2 YYY1234
 
-Dane wyjściowe:
-PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): AAA1111 - BBB1222
-PRAWDOPODOBNE DOPASOWANIE (OSOBOWY): AAA1010 - AAA1020
-DOKLADNE DOPASOWANIE (CIEZAROWY): CCC9999 - CCC9999
-DOKLADNE DOPASOWANIE (OSOBOWY): AAA2222 - AAA2222
-PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): BBB1111 - VVVV1111
-PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): BBB1212 - DDD0000
-PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): XASD0000 - DDD1111
-PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): CCC2121 - XXX1235
-PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): XXX1334 - XXX1236
+Dane wyjściowe:\
+PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): AAA1111 - BBB1222\
+PRAWDOPODOBNE DOPASOWANIE (OSOBOWY): AAA1010 - AAA1020\
+DOKLADNE DOPASOWANIE (CIEZAROWY): CCC9999 - CCC9999\
+DOKLADNE DOPASOWANIE (OSOBOWY): AAA2222 - AAA2222\
+PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): BBB1111 - VVVV1111\
+PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): BBB1212 - DDD0000\
+PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): XASD0000 - DDD1111\
+PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): CCC2121 - XXX1235\
+PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): XXX1334 - XXX1236\
 PRAWDOPODOBNE DOPASOWANIE (CIEZAROWY): XXX1234 - YYY1234
